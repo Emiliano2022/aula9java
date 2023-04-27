@@ -1,0 +1,41 @@
+public class Principal {
+      public static void main (String [] args) {
+        calculo obj1 = new calculo();
+        calculo obj2 = new calculo();
+            obj1.x = 1;
+            obj2.y = 2;
+        
+        System.out.println("Objeto 1");
+        System.out.println("x = " + obj1.x);
+        System.out.println("y = " + obj2.y);
+                
+        System.out.println("Objeto 2");
+        System.out.println("x = " + obj1.x);
+        System.out.println("y = " + obj2.y);        
+        
+        System.out.println("Objeto 1 --> x + y = soma");
+        System.out.println(obj1.x +" + " + obj1.y + " = " + obj1.soma());
+        System.out.println("Objeto 2 --> x + y = soma");
+        System.out.println(obj2.x +" + " + obj2.y + " = " + obj2.soma());
+        
+        System.out.println("divisao () = " + MetodoEstatico.divisao());
+      }
+}
+================================================================================================
+public class calculo {
+    public int x;
+    public static int y;
+    
+    int soma (){
+    return x + y;
+    }
+}
+================================================================================================
+public class MetodoEstatico {
+    static int valor =  10;
+    
+    static int divisao(){
+        return valor/2;
+    }
+}
+
